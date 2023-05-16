@@ -1,0 +1,1 @@
+Stereo-seq sequencing data were preprocessed using [SAW](https://github.com/STOmics/SAW) to generation spatial gene expression matrices in [GEM format](https://stereopy.readthedocs.io/en/latest/Tutorials/IO.html#GEM)
