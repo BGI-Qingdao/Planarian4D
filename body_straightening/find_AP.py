@@ -10,6 +10,7 @@ import scipy.linalg as sl
 def polyfix(x, y, n, xfix, yfix, xder='', dydx=''):
     """ Fits polynomial p with degree n to data,
         but specify value at specific points
+        This code is copy from https://github.com/jbae11/polyfix.py with little modification
     """
 
     nfit = len(x)
