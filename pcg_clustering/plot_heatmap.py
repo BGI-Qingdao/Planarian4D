@@ -17,10 +17,6 @@ matplotlib.rcParams['svg.fonttype'] = 'none'
 plt.rcParams["axes.grid"] = False
 
 
-colors=["#00193a","#002b53","#023f73","#034780","#7a0213","#a10220","#bf0a26","#cd0c2b","#131313","#262626"]
-#twilight_shifted'
-c = 'RdYlBu_r'
-
 def plot_heatmap(gene_mat, labels:np.ndarray, name, orders, fntsz=6):
     c = 'RdYlBu_r'
     vmin = np.min(gene_mat)
@@ -75,14 +71,13 @@ python plot_heatmap.py scaled_cell_norm.csv labels_sorted.txt ap 6
 
 
 if __name__ == '__main__':
+    c = 'RdYlBu_r'
     expr = pd.read_csv(sys.argv[1])
     gene_mat = expr.T.to_numpy()
     labels = np.loadtxt(sys.argv[2])
     mode = sys.argv[3]
     font_size = sys.argv[4]
     if mode == 'ap':
-        #ap_order = [1,0,3,4,5,6,7,8,9,10,11,12,13,14,16,15]
-        #ap_order = [1,0,3,4,5,6,7,8,9,10,11]
         ap_order = [1,0,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
         plot_heatmap(gene_mat, labels, 'apxx', ap_order, font_size)
     elif mode == 'ml':
