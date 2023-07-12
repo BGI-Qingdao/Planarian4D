@@ -78,7 +78,7 @@ if __name__ == '__main__':
     mode = sys.argv[3]
     font_size = sys.argv[4]
     if mode == 'ap':
-        ap_order = [1,0,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
+        ap_order = [1,0,3,4,5,6,7,8,9,10,11,12,13,14,16,15]
         plot_heatmap(gene_mat, labels, 'apxx', ap_order, font_size)
     elif mode == 'ml':
         ml_order = [22, 21, 24, 20, 25, 23, 17, 30, 28, 29, 16, 19, 26, 27, 0, 1, 18, 5, 3, 8, 4, 7, 9, 11, 10, 12, 6, 14, 13, 15, 2]
